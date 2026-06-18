@@ -1,0 +1,152 @@
+{
+  "feature_names": [
+    "brand",
+    "vehicle_age",
+    "km_driven",
+    "seller_type",
+    "fuel_type",
+    "transmission_type",
+    "mileage",
+    "engine",
+    "max_power",
+    "seats",
+    "price_per_km",
+    "power_per_engine",
+    "age_km",
+    "log_km"
+  ],
+  "cat_cols": [
+    "brand",
+    "seller_type",
+    "fuel_type",
+    "transmission_type"
+  ],
+  "cat_values": {
+    "brand": [
+      "Audi",
+      "BMW",
+      "Datsun",
+      "Force",
+      "Ford",
+      "Honda",
+      "Hyundai",
+      "Isuzu",
+      "Jaguar",
+      "Jeep",
+      "Kia",
+      "Land Rover",
+      "Lexus",
+      "MG",
+      "Mahindra",
+      "Maruti",
+      "Mercedes-Benz",
+      "Mini",
+      "Nissan",
+      "Renault",
+      "Skoda",
+      "Tata",
+      "Toyota",
+      "Volkswagen",
+      "Volvo"
+    ],
+    "seller_type": [
+      "Dealer",
+      "Individual",
+      "Trustmark Dealer"
+    ],
+    "fuel_type": [
+      "CNG",
+      "Diesel",
+      "Electric",
+      "LPG",
+      "Petrol"
+    ],
+    "transmission_type": [
+      "Automatic",
+      "Manual"
+    ]
+  },
+  "results": {
+    "Linear Regression": {
+      "R\u00b2 Score": 0.8142,
+      "Adj R\u00b2": 0.8133,
+      "MAE": 143265.0,
+      "MSE": 52213767926.0,
+      "RMSE": 228503.0
+    },
+    "Ridge": {
+      "R\u00b2 Score": 0.8145,
+      "Adj R\u00b2": 0.8136,
+      "MAE": 142982.0,
+      "MSE": 52140561794.0,
+      "RMSE": 228343.0
+    },
+    "Lasso": {
+      "R\u00b2 Score": 0.8143,
+      "Adj R\u00b2": 0.8134,
+      "MAE": 143124.0,
+      "MSE": 52176695142.0,
+      "RMSE": 228422.0
+    },
+    "Decision Tree": {
+      "R\u00b2 Score": 0.9584,
+      "Adj R\u00b2": 0.9581,
+      "MAE": 54482.0,
+      "MSE": 11704123026.0,
+      "RMSE": 108186.0
+    },
+    "Random Forest": {
+      "R\u00b2 Score": 0.9819,
+      "Adj R\u00b2": 0.9818,
+      "MAE": 25663.0,
+      "MSE": 5080971556.0,
+      "RMSE": 71281.0
+    },
+    "Extra Trees": {
+      "R\u00b2 Score": 0.9719,
+      "Adj R\u00b2": 0.9718,
+      "MAE": 40697.0,
+      "MSE": 7889274463.0,
+      "RMSE": 88822.0
+    },
+    "Gradient Boosting": {
+      "R\u00b2 Score": 0.9609,
+      "Adj R\u00b2": 0.9607,
+      "MAE": 65272.0,
+      "MSE": 10987717614.0,
+      "RMSE": 104822.0
+    },
+    "AdaBoost": {
+      "R\u00b2 Score": 0.7152,
+      "Adj R\u00b2": 0.7138,
+      "MAE": 249585.0,
+      "MSE": 80048532475.0,
+      "RMSE": 282928.0
+    },
+    "XGBoost": {
+      "R\u00b2 Score": 0.9871,
+      "Adj R\u00b2": 0.987,
+      "MAE": 23900.0,
+      "MSE": 3631164416.0,
+      "RMSE": 60259.0
+    },
+    "LightGBM": {
+      "R\u00b2 Score": 0.9878,
+      "Adj R\u00b2": 0.9877,
+      "MAE": 25279.0,
+      "MSE": 3437916865.0,
+      "RMSE": 58634.0
+    },
+    "CatBoost": {
+      "R\u00b2 Score": 0.9807,
+      "Adj R\u00b2": 0.9807,
+      "MAE": 38505.0,
+      "MSE": 5410005165.0,
+      "RMSE": 73553.0
+    }
+  },
+  "best_model": "LightGBM",
+  "best_r2": 0.9878,
+  "cv_mean": 0.9898364642938459,
+  "cv_std": 0.0012162732584523098
+}

@@ -440,7 +440,8 @@ with st.sidebar:
     <div class="sb-logo">
         <div class="icon">🚗</div>
         <div class="brand">
-            <div class="brand-name"><h1>Car Price Predictor</h1></div>
+            <div class="brand-name">Car Price<br>Predictor</div>
+            <div class="brand-sub">Powered by LightGBM</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -456,13 +457,13 @@ with st.sidebar:
     st.divider()
 
     if LOADED:
-        st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>📊 Model Performance</span>", unsafe_allow_html=True)
+        st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>📊 Model Performance</span>", unsafe_allow_html=True)
         st.metric("Best Model",   meta["best_model"])
         st.metric("R² Score",     f"{meta['best_r2']:.4f}")
         st.metric("CV R² (mean)", f"{meta['cv_mean']:.4f} ± {meta['cv_std']:.4f}")
         st.divider()
 
-        st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>🏆 Model Ranking</span>", unsafe_allow_html=True)
+        st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>🏆 Model Ranking</span>", unsafe_allow_html=True)
         st.markdown("<br>", unsafe_allow_html=True)
         results = meta["results"]
         medals  = ["🥇","🥈","🥉","4️⃣","5️⃣"]
@@ -475,10 +476,10 @@ with st.sidebar:
 
         st.divider()
 
-    st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>ℹ️ About</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>ℹ️ About</span>", unsafe_allow_html=True)
     st.markdown(f"""
     <div style='font-size:0.85rem;color:{T["text_secondary"]};line-height:1.6;margin-top:8px'>
-    ML system trained on <strong style='color:{T["text_primary"]}'>15,000+ uesd car listings</strong>.<br>
+    ML system trained on <strong style='color:{T["text_primary"]}'>15,000+ listings</strong>.<br>
     <strong style='color:{T["text_primary"]}'>11</strong> algorithms tested.<br>
     Winner: <strong style='color:#3B82F6'>LightGBM</strong> · 98.97% accuracy
     </div>
@@ -537,7 +538,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ─── Input Form ───────────────────────────────────────────────────────────────
-st.markdown('<div class="section-head"><h3>🔧 Enter Car Details</h3></div>', unsafe_allow_html=True)
+st.markdown('<div class="section-head">🔧 Enter Car Details</div>', unsafe_allow_html=True)
 
 cat_values = meta["cat_values"]
 brands_sorted = sorted(cat_values["brand"])
@@ -644,10 +645,11 @@ if predict_btn:
                 "engine":            engine,
                 "max_power":         max_power,
                 "seats":             seats,
-                "price_per_km":      0,
                 "power_per_engine":  max_power / (engine + 1),
                 "age_km":            vehicle_age * km_driven,
                 "log_km":            np.log1p(km_driven),
+                "engine_age":        engine * vehicle_age,
+                "power_age":         max_power / (vehicle_age + 1),
             }
             X_in  = pd.DataFrame([[raw.get(f, 0) for f in fnames]], columns=fnames)
             price = max(0, model.predict(scaler.transform(X_in))[0])

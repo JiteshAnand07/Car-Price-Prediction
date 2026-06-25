@@ -17,7 +17,7 @@ st.set_page_config(
     page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={"About": "### Car Price Prediction System\nPowered by LightGBM · R² ≈ 0.9897"}
+    menu_items={"About": "### Car Price Prediction System\nPowered by LightGBM · R² ≈ 0.9376"}
 )
 
 # ─── Session State Defaults ───────────────────────────────────────────────────
@@ -440,8 +440,7 @@ with st.sidebar:
     <div class="sb-logo">
         <div class="icon">🚗</div>
         <div class="brand">
-            <div class="brand-name">Car Price<br>Predictor</div>
-            <div class="brand-sub">Powered by LightGBM</div>
+            <div class="brand-name"><h1>Car Price Predictor</h1><div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -457,13 +456,13 @@ with st.sidebar:
     st.divider()
 
     if LOADED:
-        st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>📊 Model Performance</span>", unsafe_allow_html=True)
+        st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>📊 Model Performance</span>", unsafe_allow_html=True)
         st.metric("Best Model",   meta["best_model"])
         st.metric("R² Score",     f"{meta['best_r2']:.4f}")
         st.metric("CV R² (mean)", f"{meta['cv_mean']:.4f} ± {meta['cv_std']:.4f}")
         st.divider()
 
-        st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>🏆 Model Ranking</span>", unsafe_allow_html=True)
+        st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>🏆 Model Ranking</span>", unsafe_allow_html=True)
         st.markdown("<br>", unsafe_allow_html=True)
         results = meta["results"]
         medals  = ["🥇","🥈","🥉","4️⃣","5️⃣"]
@@ -476,12 +475,12 @@ with st.sidebar:
 
         st.divider()
 
-    st.markdown(f"<span style='font-size:0.8rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>ℹ️ About</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>ℹ️ About</span>", unsafe_allow_html=True)
     st.markdown(f"""
     <div style='font-size:0.85rem;color:{T["text_secondary"]};line-height:1.6;margin-top:8px'>
     ML system trained on <strong style='color:{T["text_primary"]}'>15,000+ listings</strong>.<br>
     <strong style='color:{T["text_primary"]}'>11</strong> algorithms tested.<br>
-    Winner: <strong style='color:#3B82F6'>LightGBM</strong> · 98.97% accuracy
+    Winner: <strong style='color:#3B82F6'>LightGBM</strong> · 93.76% accuracy
     </div>
     """, unsafe_allow_html=True)
 

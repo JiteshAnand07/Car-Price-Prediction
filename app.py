@@ -222,7 +222,7 @@ header[data-testid="stHeader"] {{
 
 /* ── Section heading ── */
 .section-head {{
-    font-size: 1.02rem; font-weight: 700; color: {T["text_primary"]};
+    font-size: 1.5rem; font-weight: 700; color: {T["text_primary"]};
     padding: 0.4rem 0 0.8rem; border-bottom: 2px solid {T["section_border"]};
     margin-bottom: 1.3rem; display:flex; align-items:center; gap:8px;
 }}
@@ -234,7 +234,7 @@ header[data-testid="stHeader"] {{
     box-shadow: 0 1px 4px {T["card_shadow"]}; height: 100%;
 }}
 .form-card-title {{
-    font-size: 0.78rem; font-weight: 700; color: {T["text_secondary"]};
+    font-size: 0.9rem; font-weight: 700; color: {T["text_secondary"]};
     text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;
     padding-bottom: 0.6rem; border-bottom: 1px solid {T["card_border"]};
 }}
@@ -243,7 +243,7 @@ header[data-testid="stHeader"] {{
 label, .stSelectbox label, .stSlider label,
 .stNumberInput label, [data-testid="stWidgetLabel"] p {{
     color: {T["text_label"]} !important;
-    font-size: 0.84rem !important;
+    font-size: 0.92rem !important;
     font-weight: 600 !important;
 }}
 
@@ -359,7 +359,7 @@ label, .stSelectbox label, .stSlider label,
 .tip-box {{
     background: {T["tip_bg"]}; border: 1px solid {T["tip_border"]};
     border-left: 4px solid {T["tip_left"]}; border-radius: 8px;
-    padding: 0.8rem 1rem; color: {T["tip_text"]}; font-size: 0.84rem;
+    padding: 0.8rem 1rem; color: {T["tip_text"]}; font-size: 0.89rem;
     line-height: 1.55; margin-top: 0.8rem;
 }}
 
@@ -370,8 +370,8 @@ label, .stSelectbox label, .stSlider label,
     padding: 0.82rem 1rem; margin-bottom: 0.65rem;
     box-shadow: 0 1px 3px {T["card_shadow"]};
 }}
-.driver-card .dt {{ color: {T["driver_title"]}; font-size: 0.88rem; font-weight: 600; margin-bottom: 3px; }}
-.driver-card .dd {{ color: {T["driver_desc"]}; font-size: 0.81rem; line-height: 1.5; }}
+.driver-card .dt {{ color: {T["driver_title"]}; font-size: 0.94rem; font-weight: 600; margin-bottom: 3px; }}
+.driver-card .dd {{ color: {T["driver_desc"]}; font-size: 0.87rem; line-height: 1.5; }}
 
 /* ── Rank pills ── */
 .rank-pill {{
@@ -379,9 +379,9 @@ label, .stSelectbox label, .stSlider label,
     background: {T["rank_bg"]}; border: 1px solid {T["rank_border"]};
     border-radius: 8px; padding: 8px 11px; margin-bottom: 6px;
 }}
-.rank-pill .rn {{ color: {T["rank_name"]} !important; font-size: 0.83rem; font-weight: 600; }}
+.rank-pill .rn {{ color: {T["rank_name"]} !important; font-size: 1.0rem; font-weight: 600; }}
 .rank-pill .rs {{
-    color: #3B82F6 !important; font-size: 0.8rem; font-weight: 700;
+    color: #3B82F6 !important; font-size: 0.9rem; font-weight: 700;
     background: rgba(59,130,246,0.12); padding: 2px 7px;
     border-radius: 4px; border: 1px solid rgba(59,130,246,0.25);
 }}
@@ -395,8 +395,8 @@ label, .stSelectbox label, .stSlider label,
 /* ── Metrics ── */
 [data-testid="stMetric"] {{ background: {T["card_bg"]} !important; border: 1px solid {T["card_border"]};
     border-radius: 10px; padding: 0.7rem 1rem; }}
-[data-testid="stMetricLabel"] p {{ color: {T["text_secondary"]} !important; font-size:0.8rem !important; }}
-[data-testid="stMetricValue"] {{ color: {T["text_primary"]} !important; font-weight:700 !important; }}
+[data-testid="stMetricLabel"] p {{ color: {T["text_secondary"]} !important; font-size:1.0rem !important; }}
+[data-testid="stMetricValue"] {{ color: {T["text_primary"]} !important; font-size:1.6rem; font-weight:560 !important; }}
 
 /* ── Alerts ── */
 .stAlert {{ border-radius: 10px !important; }}
@@ -408,7 +408,7 @@ hr {{ border-color: {T["divider"]} !important; margin: 1.6rem 0 !important; }}
 /* ── Footer ── */
 .footer {{
     text-align: center; padding: 1.8rem 0 0.5rem;
-    color: {T["footer_text"]}; font-size: 0.78rem;
+    color: {T["footer_text"]}; font-size: 0.90rem;
     border-top: 1px solid {T["footer_border"]}; margin-top: 2.5rem;
 }}
 
@@ -417,10 +417,10 @@ hr {{ border-color: {T["divider"]} !important; margin: 1.6rem 0 !important; }}
     display: flex; align-items: center; gap: 12px;
     padding: 1.6rem 0 1rem;
 }}
-.sb-logo .icon {{ font-size: 3rem; line-height: 1; }}
+.sb-logo .icon {{ font-size: 4rem; line-height: 1; }}
 .sb-logo .brand {{ display: flex; flex-direction: column; }}
 .sb-logo .brand-name {{
-    font-size: 1.15rem; font-weight: 800; color: {T["text_primary"]};
+    font-size: 2.05rem; font-weight: 800; color: {T["text_primary"]};
     letter-spacing: -0.3px; line-height: 1.2;
 }}
 .sb-logo .brand-sub {{ font-size: 0.72rem; color: {T["text_secondary"]}; font-weight: 500; margin-top: 2px; }}
@@ -440,7 +440,7 @@ with st.sidebar:
     <div class="sb-logo">
         <div class="icon">🚗</div>
         <div class="brand">
-            <div class="brand-name"><h1>Car Price Predictor</h1><div>
+            <div class="brand-name">Car Price Predictor<div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -477,10 +477,10 @@ with st.sidebar:
 
     st.markdown(f"<span style='font-size:1.3rem;font-weight:700;color:{T['text_secondary']};text-transform:uppercase;letter-spacing:0.07em'>ℹ️ About</span>", unsafe_allow_html=True)
     st.markdown(f"""
-    <div style='font-size:0.85rem;color:{T["text_secondary"]};line-height:1.6;margin-top:8px'>
+    <div style='font-size:1.05rem;color:{T["text_secondary"]};line-height:1.6;margin-top:8px'>
     ML system trained on <strong style='color:{T["text_primary"]}'>15,000+ listings</strong>.<br>
     <strong style='color:{T["text_primary"]}'>11</strong> algorithms tested.<br>
-    Winner: <strong style='color:#3B82F6'>LightGBM</strong> · 93.76% accuracy
+    Winner: <strong style='color:#3B82F6'>LightGBM</strong> · {meta['best_r2']*100:.2f}% accuracy
     </div>
     """, unsafe_allow_html=True)
 
@@ -524,7 +524,7 @@ for col, (label, val, accent) in zip(
     [("🎯 R² Score",      f"{meta['best_r2']:.4f}", True),
      ("📈 CV R² Mean",    f"{meta['cv_mean']:.4f}",  True),
      ("🏆 Best Model",    meta["best_model"],         False),
-     ("📦 Training Rows", "14,956",                   False)]
+     ("📦 Training Rows", "11,482",                   False)]
 ):
     with col:
         st.markdown(f"""
@@ -714,14 +714,15 @@ if st.session_state.history:
 st.divider()
 st.markdown('<div class="section-head">📊 Key Price Drivers</div>', unsafe_allow_html=True)
 drivers = [
-    ("🔑 Price / KM Ratio",  "Derived feature combining price and usage — single strongest predictor"),
-    ("🛣️ KM Driven",         "High mileage significantly reduces resale value"),
-    ("⚡ Max Power (bhp)",   "More powerful cars command a price premium across all segments"),
-    ("⚙️ Engine CC",         "Larger displacement correlates with higher price brackets"),
-    ("📅 Vehicle Age",       "Depreciation accelerates after 5 years — major pricing factor"),
+    ("🛣️ Mileage (kmpl)",    "Top predictor in the model — fuel efficiency correlates strongly with price segment"),
+    ("📅 Age × KM Driven",   "Combined wear indicator — older, higher-mileage cars depreciate fastest"),
+    ("🚗 KM Driven",         "High mileage on its own significantly reduces resale value"),
+    ("⚡ Power ÷ Age",       "Newer, more powerful cars retain value better than older high-power ones"),
+    ("⚙️ Power ÷ Engine",    "Performance-to-displacement ratio — a proxy for how 'sporty' the car is"),
+    ("📅 Vehicle Age",       "Depreciation accelerates after 5 years — a major standalone pricing factor"),
     ("⛽ Fuel Type",         "Diesel & Electric hold value better than Petrol or CNG"),
-    ("🔄 Transmission",      "Automatic cars fetch a 15–20% premium over Manual"),
-    ("🏷️ Brand",             "Luxury brands (BMW, Audi, Mercedes) command significantly higher prices"),
+    ("🔄 Transmission",      "Automatic cars fetch a premium over Manual in most segments"),
+    ("🏷️ Brand",             "Luxury brands (BMW, Audi, Jaguar) command significantly higher prices"),
 ]
 d1, d2 = st.columns(2, gap="medium")
 for i, (title, desc) in enumerate(drivers):

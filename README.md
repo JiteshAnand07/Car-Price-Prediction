@@ -1,13 +1,7 @@
 <div align="center">
-<<<<<<< Updated upstream
-        
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Car+Price+Prediction+System;Machine+Learning+%7C+LightGBM+%7C+Streamlit" alt="Typing SVG" />
-        
-=======
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Car+Price+Prediction+System;Machine+Learning%7CLightGBM%7CStreamlit" alt="Typing SVG" />
 
->>>>>>> Stashed changes
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)

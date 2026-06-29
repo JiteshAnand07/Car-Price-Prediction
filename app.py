@@ -1,8 +1,8 @@
 """
 Car Price Prediction System — Professional Streamlit App
-Light / Dark theme toggle · Persistent form state · Clean UI
+Light / Dark theme toggle · Persistent form state 
 """
-
+# · Clean UI
 import streamlit as st
 import pandas as pd
 import numpy as np
